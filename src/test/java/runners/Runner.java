@@ -15,8 +15,8 @@ import org.junit.runner.RunWith;
         monochrome=true,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = false,
-        tags = "@failed_tests"
+        dryRun =false,
+        tags = "@data_tables"
 
 )
 public class Runner {
