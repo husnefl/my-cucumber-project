@@ -1,4 +1,5 @@
 package stepdefinitions;
+
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.datatable.DataTable;
@@ -10,6 +11,7 @@ import utilities.ReusableMethods;
 
 import java.util.List;
 import java.util.Map;
+
 public class LoginStepDefinitions {
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
@@ -24,6 +26,7 @@ public class LoginStepDefinitions {
 //        loginPage.username.sendKeys(customerData.get(0));
 //        loginPage.password.sendKeys(customerData.get(1));
 //        loginPage.loginButton.click();
+
 //        2. GET DATA AS <LIST<MAP<STRING,STRING>>
         List<Map<String,String>> customerData =  credentials.asMaps(String.class,String.class);
 //        System.out.println(customerData);
@@ -37,9 +40,16 @@ public class LoginStepDefinitions {
     public void verify_the_application_login_is_successful() {
         Assert.assertTrue(homePage.userID.isDisplayed());
     }
+
     @Then("verify the next page url contains login keyword")
     public void verify_the_next_page_url_contains_login_keyword() {
         ReusableMethods.waitFor(5);
-        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("login"));
+        Assert.assertTrue(false);
+//        BELOW ASSERTION FAILS
+//        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("login"));
     }
+
+
+
+
 }
