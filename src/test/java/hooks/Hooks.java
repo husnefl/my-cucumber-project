@@ -1,12 +1,10 @@
 package hooks;
-
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
-
 public class Hooks {
     /*
     Hooks is used to run before and after each SCENARIO or SCENARIO OUTLINE
@@ -24,9 +22,6 @@ public class Hooks {
             Driver.closeDriver();
         }
     }
-
-
-
     //    This Before hooks ONLY RUNS for @smoke_test TAGGED SCENARIOS
 //    @Before(value = "@smoke_tests")
     @Before("@smoke_tests")
@@ -38,7 +33,4 @@ public class Hooks {
     public void tearDownSmokeScenarios(){
         System.out.println("RUN FOR ONLY SMOKE TEST SCENARIOS");
     }
-
-
-
 }
